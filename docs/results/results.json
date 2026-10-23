@@ -1,0 +1,803 @@
+{
+ "built_utc": "2026-10-23T19:09:00",
+ "status": "interim (account still trading)",
+ "start": {
+  "t": "2026-10-22T08:00:06",
+  "tmn": 5000000,
+  "usdt_bought": 18.57,
+  "tmn_spent": 4979296,
+  "avg_usdttmn": 268136.6,
+  "tmn_left": 20704
+ },
+ "mark": {
+  "t": "2026-10-23T19:09:00",
+  "usdttmn_bid": 268160.0,
+  "usdt": 18.5004,
+  "tmn_left": 20704,
+  "tmn_mark": 4981771,
+  "tmn_after_taker_fee": 4966888,
+  "return_pct": -0.662
+ },
+ "final": null,
+ "equity": {
+  "usdt_first_cycle": 18.5143,
+  "usdt_now": 18.5004,
+  "max_dd_usdt_pct": -0.079,
+  "max_dd_tmn_pct": -1.743
+ },
+ "fees": {
+  "usdt": 0.059501,
+  "tmn": 0,
+  "tmn_total_approx": 15985
+ },
+ "trades": [
+  {
+   "time_utc": "2026-10-22T08:00:06",
+   "engine": "convert",
+   "run_id": "convert-tmn",
+   "mode": "live",
+   "kind": "order",
+   "symbol": "USDTTMN",
+   "action": "BUY",
+   "filled_qty": "0.21",
+   "price": "267049",
+   "fee": "0.00063",
+   "status": "FILLED",
+   "signal": "probe_placed",
+   "reason": "contest start/end: move the account between TMN and USDT"
+  },
+  {
+   "time_utc": "2026-10-22T08:01:19",
+   "engine": "convert",
+   "run_id": "convert-tmn",
+   "mode": "live",
+   "kind": "order",
+   "symbol": "USDTTMN",
+   "action": "BUY",
+   "filled_qty": "18.36",
+   "price": "268149",
+   "fee": "0.05508",
+   "status": "FILLED",
+   "signal": "bulk_placed",
+   "reason": "contest start/end: move the account between TMN and USDT"
+  },
+  {
+   "time_utc": "2026-10-22T14:43:10",
+   "engine": "oil-agent",
+   "run_id": "oil-probe",
+   "mode": "live",
+   "kind": "order",
+   "symbol": "USOONUSDT",
+   "action": "BUY",
+   "filled_qty": "0.0091",
+   "price": "163.26",
+   "fee": "0.0019131476",
+   "status": "filled",
+   "signal": "probe",
+   "reason": "live micro round trip (buy, then sell) to check the oil order path before going live"
+  },
+  {
+   "time_utc": "2026-10-22T14:43:10",
+   "engine": "oil-agent",
+   "run_id": "oil-probe",
+   "mode": "live",
+   "kind": "order",
+   "symbol": "USOONUSDT",
+   "action": "SELL",
+   "filled_qty": "0.009",
+   "price": "160.21",
+   "fee": "0.001878201",
+   "status": "filled",
+   "signal": "probe",
+   "reason": "live micro round trip (buy, then sell) to check the oil order path before going live"
+  }
+ ],
+ "g": {
+  "run_id": "live-1",
+  "mode": "live",
+  "cycles": 62,
+  "orders": 0,
+  "cycles_any_gate_on": 0,
+  "best_28d": {
+   "ret_pct": -0.53,
+   "symbol": "BTCUSDT",
+   "t": "2026-10-22T23:30:00"
+  },
+  "risk_events": [],
+  "verdicts": [],
+  "last_signals": {
+   "BTCUSDT": "BTC: 2/6 SMA pairs up, 28d -3.2% → gate off, w=0",
+   "ETHUSDT": "ETH: 2/6 SMA pairs up, 28d -11.1% → gate off, w=0",
+   "XRPUSDT": "XRP: 2/6 SMA pairs up, 28d -15.0% → gate off, w=0",
+   "SOLUSDT": "SOL: 1/6 SMA pairs up, 28d -10.9% → gate off, w=0",
+   "BNBUSDT": "BNB: 4/6 SMA pairs up, 28d -4.8% → gate off, w=0"
+  },
+  "uptime": {
+   "first": "2026-10-22T09:30:00",
+   "last": "2026-10-23T19:00:00",
+   "expected": 68,
+   "done": 62,
+   "pct": 91.2
+  },
+  "alerts": [
+   "2026-10-22T14:03:39.844365597 resumed run live-1 at cycle 10",
+   "2026-10-22T14:47:41.381453514 resumed run live-1 at cycle 11",
+   "2026-10-23T05:06:22.197824717 resumed run live-1 at cycle 33"
+  ]
+ },
+ "oil": {
+  "live": {
+   "run_id": "oil-live-1",
+   "mode": "live",
+   "profile": "aggressive",
+   "decisions": 36,
+   "by_decision": {
+    "NO_TRADE": 35,
+    "WATCH": 1
+   },
+   "trades": 0,
+   "closed": [],
+   "killed": false,
+   "paused": null,
+   "forward": {
+    "1h": {
+     "n": 35,
+     "entry_would_lose_pct": 88.6,
+     "mean_net_pct": -0.457
+    },
+    "2h": {
+     "n": 34,
+     "entry_would_lose_pct": 64.7,
+     "mean_net_pct": -0.215
+    },
+    "4h": {
+     "n": 30,
+     "entry_would_lose_pct": 63.3,
+     "mean_net_pct": -0.053
+    },
+    "8h": {
+     "n": 18,
+     "entry_would_lose_pct": 16.7,
+     "mean_net_pct": 0.48
+    }
+   },
+   "lessons": [
+    {
+     "t": "2026-10-23T11:50:06",
+     "text": "When the 1h, 4h and 24h USOON returns are all the same value, USOON printed once and then froze. Treat it like an all-zero stale quote (L38) and wait for the US open to check against USO."
+    },
+    {
+     "t": "2026-10-23T12:40:06",
+     "text": "Before the US open, a 4h gap under 1% with a cost near 0.9% can never pass. Settle it quickly using the L51 fair-value estimate (USO close × perp move) and save web searches for after 13:30 UTC, when live USO data exists."
+    },
+    {
+     "t": "2026-10-23T13:10:06",
+     "text": "With 20 minutes to the US open and a stale USOON print, skip and recheck once USO trades. Pre-open entries against a frozen quote keep scoring about −0.5% to −0.9% net at 1–4h."
+    },
+    {
+     "t": "2026-10-23T13:45:06",
+     "text": "Right after the US open, a 1h perp spike against a USOON print with zero returns is still a stale quote. Compare the ask with USO close × (1 + the perp's move since the close) before calling USOON cheap. At 13:45 UTC the ask was about 1.8% "
+    },
+    {
+     "t": "2026-10-23T14:15:06",
+     "text": "In US hours, when USOON is updating but lags a 1% perp hour, estimate fair value as USO close × (1 + the perp's move since 20:00 UTC) before treating it as a lag. Here the ask was already near that value."
+    },
+    {
+     "t": "2026-10-23T14:50:06",
+     "text": "During US hours, measure the USOON ask against the previous USO close before reading the perp gap. Here a 24h perp rally of about 4% already left the ask 2.4% above the USO close, which absorbs most of the apparent 4h lag."
+    },
+    {
+     "t": "2026-10-23T15:25:06",
+     "text": "During US hours, if the 1h gap is positive (USOON ahead) and the 4h gap is below the cost, a trigger that leans on the 24h gap is noise. Skip it without searching."
+    },
+    {
+     "t": "2026-10-23T16:00:06",
+     "text": "During US hours with a big oil rally (perp +4.6% over 24h), a 4h perp gap above 1.5% again turned into USOON at or slightly above live USO, about 0.3% rich at the ask. USO's futures/roll structure absorbs part of the perp's move, so check U"
+    },
+    {
+     "t": "2026-10-23T16:30:06",
+     "text": "L41 confirmed again: a 4h perp gap of −1.58% shrank to about +0.05% once checked against live USO, because USO lags CL on big up days. During US hours, fetch the Investing.com USO quote first and skip whenever USO minus the USOON ask is bel"
+    },
+    {
+     "t": "2026-10-23T17:00:06",
+     "text": "This confirms L41 again: a 4h perp gap of about −1.8% (USOON behind the CL perp) showed USOON's ask level with live USO (167.99 vs 168.01). On days with big perp moves, the perp gap mostly reflects the perp outrunning USO. Fetch the USO quo"
+    },
+    {
+     "t": "2026-10-23T17:35:06",
+     "text": "During US hours, a USO-over-USOON-ask gap only slightly above cost (≈0.5% gap vs 0.39% cost) is not enough when USOON's returns read 0. Earlier skips in the same setup lost about 0.65% at 1h, so require the gap to exceed cost by at least 0."
+    },
+    {
+     "t": "2026-10-23T18:35:06",
+     "text": "Re-check the USOON ask against live USO before keeping a WATCH. Once the ask is at or above USO, the gap is gone and the hypothesis should be abandoned."
+    }
+   ],
+   "last_decision": {
+    "t": "2026-10-23T18:35:05",
+    "why": "scheduled sweep",
+    "decision": "NO_TRADE",
+    "thesis": "No trade. This sweep used no new searches. The earlier WATCH (h1) compared USOON with live USO and found only a small gap. USOON's ask is now 168.85. USO was 168.85 at 17:34 UTC, so the USOON ask is no longer below USO and the catch-up gap is gone. The round-trip cost is 0.53%. USOON's 15m and 1h returns read exactly 0, so the Wallex quote looks stale (L38). The US close is in about 1.4 hours (L24). The 4h USOON−WTI gap is −0.59%, below the 1.5% threshold. I am abandoning h1."
+   },
+   "uptime": {
+    "first": "2026-10-22T14:49:52",
+    "last": "2026-10-23T19:05:05",
+    "expected": 340,
+    "done": 301,
+    "pct": 88.5
+   }
+  },
+  "shadow": {
+   "run_id": "oil-s2",
+   "mode": "shadow",
+   "profile": "aggressive",
+   "decisions": 36,
+   "by_decision": {
+    "WATCH": 2,
+    "NO_TRADE": 34
+   },
+   "trades": 0,
+   "closed": [],
+   "killed": false,
+   "paused": null,
+   "forward": {
+    "1h": {
+     "n": 35,
+     "entry_would_lose_pct": 85.7,
+     "mean_net_pct": -0.476
+    },
+    "2h": {
+     "n": 34,
+     "entry_would_lose_pct": 73.5,
+     "mean_net_pct": -0.338
+    },
+    "4h": {
+     "n": 30,
+     "entry_would_lose_pct": 63.3,
+     "mean_net_pct": -0.061
+    },
+    "8h": {
+     "n": 19,
+     "entry_would_lose_pct": 31.6,
+     "mean_net_pct": 0.329
+    }
+   },
+   "lessons": [
+    {
+     "t": "2026-10-23T11:50:06",
+     "text": "During off-hours, if the 1h, 4h and 24h USOON returns are all the same value, one print moved the quote. Treat it as stale (L38) and anchor fair value on USO's close × (1 + the perp move since then)."
+    },
+    {
+     "t": "2026-10-23T12:40:06",
+     "text": "Pre-open triggers with a 4h gap below 1% and a cost near 0.9% have kept scoring negative. Skip them without searching, and recheck USO against the USOON ask after 13:30 UTC instead."
+    },
+    {
+     "t": "2026-10-23T13:10:06",
+     "text": "At 20 minutes before the open with a frozen USOON print, do not search widely. Wait for the first post-open snapshot and compare it with live USO (L41), because pre-open skips have kept scoring negative net."
+    },
+    {
+     "t": "2026-10-23T13:45:06",
+     "text": "At the US open, a perp spike of about 1% in 1h with a 4h gap under 1.5% does not make USOON cheap. Recheck it against USO close × (1 + perp move since 20:00) after 1–2 live bars, before treating it as a lag."
+    },
+    {
+     "t": "2026-10-23T14:15:06",
+     "text": "In the first hour of the US session, a perp burst of about 1% with a 4h gap under 1.5% only gives a USO-close-based fair-value discount of roughly 0.2–0.6%. Without a live USO quote that is about the size of the cost, so skip it rather than"
+    },
+    {
+     "t": "2026-10-23T14:50:06",
+     "text": "Even during US hours, USOON's 1h return can read exactly 0 while the perp moves. Treat that as a stale print (L38), not a lag. Recheck after the next USOON print, and enter only if the gap stays above 1.5% once the quote is updating."
+    },
+    {
+     "t": "2026-10-23T15:25:06",
+     "text": "During US hours, a trigger whose 1h gap is positive (perp falling while USOON is flat) and whose 4h gap is under 1% is noise. Skip it without searching, unless there is a new headline after the US open."
+    },
+    {
+     "t": "2026-10-23T16:00:06",
+     "text": "During US hours, a 4h perp gap above 1.5% on a strong rally day was again absorbed: USO (~167.5) sat just below the USOON ask (168.0). Check the USO quote first; if the USOON ask is at or above USO's intraday high, skip."
+    },
+    {
+     "t": "2026-10-23T16:30:06",
+     "text": "When a 4h perp gap above 1.5% appears late in the US session and the latest USO quote I can find is 30+ minutes old, estimate fair value as USO × (1 + perp move since that quote). Here that put the USOON ask at fair value, which turns the g"
+    },
+    {
+     "t": "2026-10-23T17:00:06",
+     "text": "On 23 Oct, a 4h perp gap of 1.6–1.8% again turned out to be no edge once checked against live USO (Robinhood $168.32 vs ask 167.99). This confirms L41: the perp's 24h move already includes USO's catch-up from the prior close."
+    },
+    {
+     "t": "2026-10-23T17:35:06",
+     "text": "Once the trigger's 4h perp gap is below 1.5% and the last known USO price is below the USOON ask, skip the web search. The rule and the USO check settle it for free."
+    },
+    {
+     "t": "2026-10-23T18:35:06",
+     "text": "When the 4h gap is under 1.5% and USOON's returns read 0, skip without searching. Before any buy, check live USO against the USOON ask."
+    }
+   ],
+   "last_decision": {
+    "t": "2026-10-23T18:35:05",
+    "why": "scheduled sweep",
+    "decision": "NO_TRADE",
+    "thesis": "No trade. The 4h USOON-minus-perp gap is -0.59%, well under the 1.5% minimum in the limits. USOON's 15m and 1h returns read 0.0, so the quote may be stale or barely moving. The round-trip cost is 0.53%. The cached USO quote near 167.5 at 15:45 UTC is below the USOON ask of 168.85, so USOON looks fully priced against USO and not cheap. The Houthi/Saudi supply headlines from 22 Oct are already in the price: the perp is up 3.7% over 24h. With about 1.4 hours of US trading left, a catch-up entry has no clear catalyst. I did no new searches this run and relied on the cache."
+   },
+   "uptime": {
+    "first": "2026-10-22T13:50:19",
+    "last": "2026-10-23T19:05:05",
+    "expected": 352,
+    "done": 302,
+    "pct": 85.8
+   }
+  },
+  "live_vs_shadow": {
+   "same_minute": 28,
+   "agree": 26
+  }
+ },
+ "curve": [
+  {
+   "t": "2026-10-22T09:30:00",
+   "usdt": 18.5143,
+   "usdttmn": 270540.0,
+   "tmn": 5029563,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T10:00:00",
+   "usdt": 18.5143,
+   "usdttmn": 270825.0,
+   "tmn": 5034839,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T10:30:00",
+   "usdt": 18.5143,
+   "usdttmn": 270825.0,
+   "tmn": 5034839,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T11:00:00",
+   "usdt": 18.5143,
+   "usdttmn": 270840.0,
+   "tmn": 5035117,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T11:30:00",
+   "usdt": 18.5143,
+   "usdttmn": 270840.0,
+   "tmn": 5035117,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T12:00:00",
+   "usdt": 18.5143,
+   "usdttmn": 270317.0,
+   "tmn": 5025434,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T12:30:00",
+   "usdt": 18.5143,
+   "usdttmn": 270317.0,
+   "tmn": 5025434,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T13:00:00",
+   "usdt": 18.5143,
+   "usdttmn": 271098.0,
+   "tmn": 5039894,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T13:30:00",
+   "usdt": 18.5143,
+   "usdttmn": 271098.0,
+   "tmn": 5039894,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T14:00:00",
+   "usdt": 18.5143,
+   "usdttmn": 271340.0,
+   "tmn": 5044374,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T14:30:00",
+   "usdt": 18.5143,
+   "usdttmn": 271340.0,
+   "tmn": 5044374,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T15:00:00",
+   "usdt": 18.4998,
+   "usdttmn": 272115.0,
+   "tmn": 5054777,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T15:30:00",
+   "usdt": 18.4997,
+   "usdttmn": 272115.0,
+   "tmn": 5054750,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T16:00:00",
+   "usdt": 18.4998,
+   "usdttmn": 272040.0,
+   "tmn": 5053390,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T16:30:00",
+   "usdt": 18.4998,
+   "usdttmn": 272040.0,
+   "tmn": 5053390,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T17:00:00",
+   "usdt": 18.4998,
+   "usdttmn": 272093.0,
+   "tmn": 5054370,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T17:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 272093.0,
+   "tmn": 5054397,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T18:00:00",
+   "usdt": 18.5,
+   "usdttmn": 272972.0,
+   "tmn": 5070686,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T18:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 272972.0,
+   "tmn": 5070659,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T19:00:00",
+   "usdt": 18.4999,
+   "usdttmn": 271885.0,
+   "tmn": 5050549,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T19:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 271885.0,
+   "tmn": 5050549,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T20:00:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T20:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T21:00:00",
+   "usdt": 18.4998,
+   "usdttmn": 271622.0,
+   "tmn": 5045657,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T21:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T22:00:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T22:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T23:00:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-22T23:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T00:00:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T00:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T01:00:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T01:30:00",
+   "usdt": 18.4999,
+   "usdttmn": 271622.0,
+   "tmn": 5045684,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T05:00:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T05:30:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T06:00:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T06:30:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T07:00:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T07:30:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T08:00:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T08:30:00",
+   "usdt": 18.5,
+   "usdttmn": 271622.0,
+   "tmn": 5045711,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T09:00:00",
+   "usdt": 18.5,
+   "usdttmn": 273212.0,
+   "tmn": 5075126,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T09:30:00",
+   "usdt": 18.5,
+   "usdttmn": 273212.0,
+   "tmn": 5075126,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T10:00:00",
+   "usdt": 18.5,
+   "usdttmn": 273215.0,
+   "tmn": 5075182,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T10:30:00",
+   "usdt": 18.5,
+   "usdttmn": 273215.0,
+   "tmn": 5075182,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T11:00:00",
+   "usdt": 18.5,
+   "usdttmn": 273445.0,
+   "tmn": 5079437,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T11:30:00",
+   "usdt": 18.5,
+   "usdttmn": 273445.0,
+   "tmn": 5079437,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T12:00:00",
+   "usdt": 18.5,
+   "usdttmn": 273087.0,
+   "tmn": 5072814,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T12:30:00",
+   "usdt": 18.5001,
+   "usdttmn": 273087.0,
+   "tmn": 5072841,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T13:00:00",
+   "usdt": 18.5,
+   "usdttmn": 272598.0,
+   "tmn": 5063767,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T13:30:00",
+   "usdt": 18.5001,
+   "usdttmn": 272598.0,
+   "tmn": 5063794,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T14:00:00",
+   "usdt": 18.5001,
+   "usdttmn": 272056.0,
+   "tmn": 5053767,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T14:30:00",
+   "usdt": 18.5001,
+   "usdttmn": 272056.0,
+   "tmn": 5053767,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T15:00:00",
+   "usdt": 18.5002,
+   "usdttmn": 271503.0,
+   "tmn": 5043564,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T15:30:00",
+   "usdt": 18.5002,
+   "usdttmn": 271503.0,
+   "tmn": 5043564,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T16:00:00",
+   "usdt": 18.5003,
+   "usdttmn": 268700.0,
+   "tmn": 4991735,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T16:30:00",
+   "usdt": 18.5004,
+   "usdttmn": 268700.0,
+   "tmn": 4991762,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T17:00:00",
+   "usdt": 18.5003,
+   "usdttmn": 268986.0,
+   "tmn": 4997026,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T17:30:00",
+   "usdt": 18.5003,
+   "usdttmn": 268986.0,
+   "tmn": 4997026,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T18:00:00",
+   "usdt": 18.5003,
+   "usdttmn": 269175.0,
+   "tmn": 5000522,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T18:30:00",
+   "usdt": 18.5004,
+   "usdttmn": 269175.0,
+   "tmn": 5000549,
+   "orders": 0
+  },
+  {
+   "t": "2026-10-23T19:00:00",
+   "usdt": 18.5004,
+   "usdttmn": 268653.0,
+   "tmn": 4990892,
+   "orders": 0
+  }
+ ],
+ "usdttmn_1h": {
+  "2026-10-22T07:00:00": 267009.0,
+  "2026-10-22T08:00:00": 270540.0,
+  "2026-10-22T09:00:00": 270825.0,
+  "2026-10-22T10:00:00": 270840.0,
+  "2026-10-22T11:00:00": 270317.0,
+  "2026-10-22T12:00:00": 271098.0,
+  "2026-10-22T13:00:00": 271340.0,
+  "2026-10-22T14:00:00": 272115.0,
+  "2026-10-22T15:00:00": 272040.0,
+  "2026-10-22T16:00:00": 272093.0,
+  "2026-10-22T17:00:00": 272972.0,
+  "2026-10-22T18:00:00": 271885.0,
+  "2026-10-22T19:00:00": 271622.0,
+  "2026-10-22T20:00:00": 271622.0,
+  "2026-10-22T21:00:00": 271622.0,
+  "2026-10-22T22:00:00": 271622.0,
+  "2026-10-23T08:00:00": 273212.0,
+  "2026-10-23T09:00:00": 273215.0,
+  "2026-10-23T10:00:00": 273445.0,
+  "2026-10-23T11:00:00": 273087.0,
+  "2026-10-23T12:00:00": 272598.0,
+  "2026-10-23T13:00:00": 272056.0,
+  "2026-10-23T14:00:00": 271503.0,
+  "2026-10-23T15:00:00": 268700.0,
+  "2026-10-23T16:00:00": 268986.0,
+  "2026-10-23T17:00:00": 269175.0,
+  "2026-10-23T18:00:00": 268653.0,
+  "2026-10-23T19:00:00": 268319.0
+ },
+ "backtest": {
+  "metrics": "docs/backtest/metrics.md",
+  "validation": "docs/backtest/validation.html",
+  "crosscheck": "docs/backtest/crosscheck.md"
+ }
+}

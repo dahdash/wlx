@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WLX Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f4;--card:#fff;--ink:#14231c;--mute:#5b6b63;--line:#dde5e0;--g:#0f9f6e;--g2:#d8f3e8;--o:#e07a10;--o2:#fdecd8;--b:#2563eb;--b2:#dbe7ff;--r:#d64545;--r2:#fbe1e1;--p:#7c3aed;--p2:#ece3ff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0f1714;--card:#17221d;--ink:#e6efe9;--mute:#9db0a6;--line:#2a3a33;--g2:#123d2e;--o2:#3d2a12;--b2:#172a4d;--r2:#3d1a1a;--p2:#2a1d47}}
+:root[data-theme="dark"]{--bg:#0f1714;--card:#17221d;--ink:#e6efe9;--mute:#9db0a6;--line:#2a3a33;--g2:#123d2e;--o2:#3d2a12;--b2:#172a4d;--r2:#3d1a1a;--p2:#2a1d47}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Vazirmatn,Tahoma,sans-serif}
+.wrap{max-width:1160px;margin:0 auto;padding:16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:0 0 18px}
+h2{margin:0 0 4px;font-size:25px;font-weight:800}
+h2 .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--g);color:#fff;font-size:17px;margin-left:10px;vertical-align:3px}
+.lead{color:var(--mute);margin:0 0 14px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.box{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--bg)}
+.box h3{margin:0 0 4px;font-size:16px}
+.box p{margin:0;color:var(--mute);font-size:14px;line-height:1.65}
+.chip{display:inline-block;border-radius:999px;padding:2px 10px;font-size:13px;font-weight:700}
+.cg{background:var(--g2);color:var(--g)}.co{background:var(--o2);color:var(--o)}.cb{background:var(--b2);color:var(--b)}.cr{background:var(--r2);color:var(--r)}.cp{background:var(--p2);color:var(--p)}
+.ltr{direction:ltr;unicode-bidi:isolate}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:Vazirmatn,Tahoma,sans-serif;fill:var(--ink)}
+.hero{background:linear-gradient(135deg,#0f9f6e,#0b5f47 55%,#14231c);color:#fff;border:0}
+.hero h1{margin:0;font:800 46px system-ui,sans-serif;direction:ltr;text-align:right}
+.hero p{margin:4px 0 0;opacity:.9;font-size:18px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.kpi{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:10px 14px}
+.kpi b{display:block;font-size:24px;direction:ltr;text-align:right}.kpi span{font-size:13px;opacity:.85}
+.quote{border-right:4px solid var(--p);background:var(--p2);border-radius:10px;padding:8px 12px;font-size:13.5px;direction:ltr;text-align:left;line-height:1.5;margin:0 0 8px}
+.tl{position:relative;margin:10px 0 0;padding:0}
+.steps{display:flex;gap:10px;align-items:stretch}
+.step{flex:1;border-radius:14px;padding:12px;background:var(--bg);border:1px solid var(--line);position:relative}
+.step b{display:block;font-size:15px}.step small{color:var(--mute);font-size:13px;line-height:1.5;display:block}
+.arrow{align-self:center;color:var(--mute);font-size:22px}
+.check{list-style:none;margin:0;padding:0;columns:2;column-gap:18px}
+.check li{padding:4px 0 4px;font-size:14.5px;break-inside:avoid}
+.check li::before{content:"✓";color:var(--g);font-weight:800;margin-left:8px}
+.foot{color:var(--mute);font-size:12.5px;margin-top:8px}
+@media (max-width:760px){.g2,.g3,.g4,.kpis{grid-template-columns:1fr}.steps{flex-direction:column}.check{columns:1}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- 0. hero -->
+<section class="hero" id="hero">
+  <div class="chip" style="background:rgba(255,255,255,.18);color:#fff">چالش معاملات الگوریتمی هوش مصنوعی والکس</div>
+  <h1>WLX</h1>
+  <p>موتور معاملاتی تمام‌خودکار: یک روندروی اعتبارسنجی‌شده + یک عامل هوش مصنوعی، روی یک حساب، پشت یک لایه‌ی ریسک قطعی.</p>
+  <div class="kpis">
+    <div class="kpi"><span>سفارش دستی</span><b>0</b></div>
+    <div class="kpi"><span>معامله‌گر</span><b>2</b></div>
+    <div class="kpi"><span>بک‌تست</span><b>6 yr</b></div>
+    <div class="kpi"><span>کد معامله = کد گیت‌هاب</span><b>SHA-256</b></div>
+  </div>
+</section>
+
+<!-- 1. two traders -->
+<section id="two">
+  <h2><span class="n">۱</span>دو معامله‌گر، یک حساب</h2>
+  <p class="lead">پول اول به تتر می‌رود، دو معامله‌گر با آن کار می‌کنند، و در پایان همه‌چیز خودکار به تومان برمی‌گردد.</p>
+  <svg viewBox="0 0 1100 330" role="img" aria-label="architecture">
+    <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#7a8a82"/></marker></defs>
+    <g font-size="16" text-anchor="middle">
+      <rect x="930" y="125" width="150" height="80" rx="16" fill="var(--b2)" stroke="var(--b)"/>
+      <text x="1005" y="160" font-weight="700">حساب</text><text x="1005" y="185" font-size="13">تومان ← تتر</text>
+      <rect x="610" y="20" width="270" height="110" rx="16" fill="var(--g2)" stroke="var(--g)"/>
+      <text x="745" y="55" font-weight="800" font-size="19">استراتژی G</text>
+      <text x="745" y="82" font-size="14">روندرو، ۵ رمزارز پرحجم</text>
+      <text x="745" y="106" font-size="13" fill="var(--mute)">فقط وقتی روند تأیید شده</text>
+      <rect x="610" y="200" width="270" height="110" rx="16" fill="var(--o2)" stroke="var(--o)"/>
+      <text x="745" y="235" font-weight="800" font-size="19">عامل نفت (AI)</text>
+      <text x="745" y="262" font-size="14">توکن صندوق نفت USOON</text>
+      <text x="745" y="286" font-size="13" fill="var(--mute)">فقط وقتی G بیرون است</text>
+      <path d="M930,150 C900,150 900,75 882,75" fill="none" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M930,180 C900,180 900,255 882,255" fill="none" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M745,132 L745,198" stroke="var(--o)" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ar)"/>
+      <text x="805" y="170" font-size="13" fill="var(--o)">G بیرون؟</text>
+      <rect x="300" y="105" width="230" height="120" rx="16" fill="var(--r2)" stroke="var(--r)"/>
+      <text x="415" y="145" font-weight="800" font-size="18">لایه‌ی ریسک قطعی</text>
+      <text x="415" y="172" font-size="13">سقف اندازه، حد ضرر، توقف</text>
+      <text x="415" y="196" font-size="13">هیچ AI نمی‌تواند شلش کند</text>
+      <path d="M608,75 C560,75 560,140 532,140" fill="none" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M608,255 C560,255 560,190 532,190" fill="none" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="20" y="125" width="200" height="80" rx="16" fill="var(--bg)" stroke="var(--line)"/>
+      <text x="120" y="160" font-weight="700">بازار والکس</text><text x="120" y="185" font-size="13">سفارش لیمیت، اول میکر</text>
+      <path d="M298,165 L222,165" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+    </g>
+  </svg>
+  <div class="steps" style="margin-top:8px">
+    <div class="step"><b>۱. شروع</b><small>تومان با سفارش لیمیت به تتر تبدیل می‌شود (کارمزد بازارهای تتری کمتر است)</small></div><div class="arrow">←</div>
+    <div class="step"><b>۲. معامله</b><small>G هر ۳۰ دقیقه، عامل نفت هر ۵ دقیقه بررسی می‌کند</small></div><div class="arrow">←</div>
+    <div class="step"><b>۳. پایان</b><small>اسکریپت خودکار همه‌چیز را به تومان برمی‌گرداند</small></div>
+  </div>
+</section>
+
+<!-- 2. strategy G -->
+<section id="g">
+  <h2><span class="n">۲</span>استراتژی G: رأی‌گیری روند + دروازه‌ی ۲۸ روزه</h2>
+  <p class="lead">برای هر رمزارز، شش «داور» با افق‌های مختلف رأی می‌دهند؛ ولی تا روند ماه اخیر مثبت نباشد، هیچ رأیی خرج نمی‌شود.</p>
+  <svg viewBox="0 0 1100 300">
+    <g text-anchor="middle" font-size="14">
+      <text x="1000" y="22" font-weight="700" font-size="15">۶ جفت میانگین متحرک</text>
+      <g id="votes"></g>
+      <path d="M905,150 L835,150" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="640" y="85" width="190" height="130" rx="16" fill="var(--b2)" stroke="var(--b)"/>
+      <text x="735" y="118" font-weight="800" font-size="17">وزن = رأی‌ها ÷ ۶</text>
+      <rect x="665" y="140" width="140" height="18" rx="9" fill="var(--card)" stroke="var(--line)"/>
+      <rect x="665" y="140" width="93" height="18" rx="9" fill="var(--b)"/>
+      <text x="735" y="190" font-size="13" fill="var(--mute)">مثلاً ۴ از ۶ ← ۶۷٪ سهم</text>
+      <path d="M638,150 L568,150" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="370" y="70" width="195" height="160" rx="16" fill="var(--g2)" stroke="var(--g)"/>
+      <text x="467" y="102" font-weight="800" font-size="17">دروازه‌ی روند</text>
+      <text x="467" y="128" font-size="13">بازده ۲۸ روزه مثبت؟</text>
+      <rect x="400" y="145" width="62" height="34" rx="17" fill="var(--g)"/><circle cx="445" cy="162" r="13" fill="#fff"/>
+      <text x="431" y="203" font-size="13" fill="var(--g)" font-weight="700">باز</text>
+      <rect x="478" y="145" width="62" height="34" rx="17" fill="#b9c4be"/><circle cx="495" cy="162" r="13" fill="#fff"/>
+      <text x="509" y="203" font-size="13" fill="var(--mute)" font-weight="700">بسته ← تتر</text>
+      <path d="M368,150 L298,150" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <rect x="40" y="85" width="255" height="130" rx="16" fill="var(--bg)" stroke="var(--line)"/>
+      <text x="167" y="118" font-weight="800" font-size="17">موقعیت هدف</text>
+      <text x="167" y="145" font-size="13">وزن × یک‌پنجم سرمایه</text>
+      <text x="167" y="170" font-size="13">خرید/فروش فقط برای رسیدن به هدف</text>
+      <text x="167" y="195" font-size="13" fill="var(--mute)">بدون اهرم، فقط خرید نقدی</text>
+    </g>
+  </svg>
+  <div class="grid g3" style="margin-top:6px">
+    <div class="box"><h3>باند ±۰٫۳٪</h3><p>هر رأی فقط با عبور واضح عوض می‌شود؛ نوسان‌های کوچک معامله‌ی بیهوده و کارمزد نمی‌سازند.</p></div>
+    <div class="box"><h3>اجرای اول-میکر</h3><p>سفارش لیمیت روی بهترین قیمت، هر ۵ دقیقه به‌روز، بعد از ۲۰ دقیقه عبور با سقف قیمت.</p></div>
+    <div class="box"><h3>در این مسابقه</h3><p>بازار کریپتو نزولی بود؛ هر پنج دروازه بسته ماندند و G عمداً در تتر ماند. این همان کنترل ضرر است.</p></div>
+  </div>
+</section>
+
+<!-- 2b. coins -->
+<section id="coins">
+  <h2><span class="n">۳</span>پنج رمزارز: چرا این‌ها، و چرا با هم؟</h2>
+  <p class="lead">G روی BTC، ETH، XRP، SOL و BNB کار می‌کند؛ همان قانون، بدون تنظیم جدا برای هر کوین.</p>
+  <div class="grid g3">
+    <div class="box"><h3>نقدشونده‌ترین بازارهای مجاز</h3><p>از جفت‌های تتری مجاز مسابقه، پرحجم‌ترین‌ها در والکس با اسپرد کم؛ سفارش لیمیت سریع پر می‌شود و هزینه کم است.</p></div>
+    <div class="box"><h3>بدون دستچین از آینده</h3><p>فهرست با یک قاعده‌ی ثابت در لحظه‌ی شروع انتخاب شد، نه با نگاه به اینکه کدام بعداً بالا رفت. بازار پرنوسان و کوین‌های بیشتر آزموده شدند و لبه‌ای اضافه نکردند.</p></div>
+    <div class="box"><h3>سبد، نه یک شرط</h3><p>هر کوین یک‌پنجم سرمایه. روندها همزمان شروع و تمام نمی‌شوند، پس سبد نرم‌تر از هر کوین به‌تنهایی حرکت می‌کند.</p></div>
+  </div>
+  <div class="grid" style="grid-template-columns:2fr 1fr;margin-top:14px">
+    <div class="box">
+      <h3>سود تجمعی G روی هر کوین و روی سبد (دوره‌ی دست‌نخورده، با کارمزد)</h3>
+      <svg viewBox="0 0 700 300" id="coinpnl"></svg>
+      <p>قانون روی هر پنج کوین جداگانه سودده است؛ این نشان می‌دهد لبه مال الگوریتم است، نه یک کوین خوش‌شانس.</p>
+    </div>
+    <div class="box">
+      <h3>بیشترین افت</h3>
+      <svg viewBox="0 0 330 300" id="coindd"></svg>
+      <p>سبد افتی کمتر از تک‌تک اجزایش دارد.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. backtest design + result -->
+<section id="bt">
+  <h2><span class="n">۴</span>بک‌تست: ساخت روی گذشته، آزمون روی داده‌ی دست‌نخورده</h2>
+  <p class="lead">قانون روی ۲۰۲۰ تا ۲۰۲۳ ساخته شد و قبل از دیدن ۲۰۲۴ تا ۲۰۲۶ قفل شد؛ معیار قبولی هم پیش از آزمون نوشته شد. کارمزد واقعی والکس در همه‌جا کسر شده.</p>
+  <svg viewBox="0 0 1100 70">
+    <rect x="20" y="20" width="1060" height="30" rx="15" fill="var(--bg)" stroke="var(--line)"/>
+    <rect x="490" y="20" width="590" height="30" rx="15" fill="var(--b2)" stroke="var(--b)"/>
+    <rect x="20" y="20" width="460" height="30" rx="15" fill="var(--g2)" stroke="var(--g)"/>
+    <g font-size="14" text-anchor="middle" font-weight="700"><text x="785" y="41">کشف قانون · ۲۰۲۰-۰۹ تا ۲۰۲۳-۱۲</text><text x="250" y="41">آزمون دست‌نخورده · ۲۰۲۴-۰۱ تا ۲۰۲۶-۰۹</text></g>
+  </svg>
+  <div class="grid g2" style="margin-top:8px">
+    <div class="box">
+      <h3>بازده هر سال: G در برابر نگه‌داری ساده</h3>
+      <svg viewBox="0 0 520 250" id="years"></svg>
+      <p>G در سال‌های صعودی کمتر می‌برد، ولی در سقوط ۲۰۲۲ تقریباً سالم ماند.</p>
+    </div>
+    <div class="box">
+      <h3>بیشترین افت سرمایه (دوره‌ی دست‌نخورده)</h3>
+      <svg viewBox="0 0 520 250" id="dd"></svg>
+      <p>هدف G جلو زدن از بازار صعودی نیست؛ مثبت ماندن با حدود یک‌سوم افت است.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. not luck -->
+<section id="luck">
+  <h2><span class="n">۵</span>چرا شانسی نیست؟ پنج آزمون</h2>
+  <p class="lead">هر آزمون به یک سؤال بدبینانه جواب می‌دهد.</p>
+  <div class="grid g2">
+    <div class="box">
+      <h3>آزمون جایگشت <span class="chip cb">«شاید زمان‌بندی شانسی بوده؟»</span></h3>
+      <svg viewBox="0 0 520 190" id="perm"></svg>
+      <p>همان معاملات را ۱۵۰ بار در زمان جابه‌جا کردیم؛ حضور در بازار و تعداد معامله یکی است، فقط زمان‌بندی از بین رفته. نسخه‌ی واقعی از ۹۷٪ آن‌ها بهتر است.</p>
+    </div>
+    <div class="box">
+      <h3>حساسیت پارامترها <span class="chip cg">«شاید عددها را دستچین کرده‌ایم؟»</span></h3>
+      <svg viewBox="0 0 520 190" id="heat"></svg>
+      <p>همه‌ی ترکیب‌های پارامتر در دوره‌ی دست‌نخورده سود سالانه‌ی مثبت دارند؛ قانون روی یک نقطه‌ی خوش‌شانس بنا نشده.</p>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:14px">
+    <div class="box"><h3>کارمزد سخت‌گیرانه <span class="chip co">«با کارمزد بیشتر چه؟»</span></h3><p>با کارمزد تیکر و حتی دو برابر کارمزد هم نتیجه مثبت می‌ماند.</p></div>
+    <div class="box"><h3>تک‌تک کوین‌ها <span class="chip cp">«شاید فقط یک کوین؟»</span></h3><p>هر پنج کوین به‌تنهایی مثبت‌اند و افتشان از نگه‌داری خیلی کمتر است.</p></div>
+    <div class="box"><h3>بررسی مستقل <span class="chip cr">«شاید باگ داریم؟»</span></h3><p>کتابخانه‌ی مستقل vectorbt همان نتایج را دوباره حساب کرد.</p></div>
+  </div>
+</section>
+
+<!-- 5. why oil -->
+<section id="whyoil">
+  <h2><span class="n">۶</span>چرا عامل نفت؟</h2>
+  <p class="lead">وقتی کریپتو روند صعودی ندارد، G بیرون است و سرمایه بیکار می‌ماند. نفت بازاری است با منطق خودش؛ ویژگی‌های همین بازار طراحی عامل را شکل داد.</p>
+  <div class="grid" style="grid-template-columns:1fr 60px 1fr;gap:10px 8px;align-items:center">
+    <div class="box"><h3>خبرمحور است</h3><p>گزارش هفتگی ذخایر، تصمیم اوپک‌پلاس، تحریم، اختلال عرضه و حمل.</p></div><div class="arrow" style="text-align:center">←</div>
+    <div class="box" style="background:var(--o2)"><h3>تحلیلگر با جست‌وجوی وب</h3><p>فقط منابعی با نشانی و زمان انتشار؛ واقعیت از شایعه و پیش‌بینی جدا می‌شود.</p></div>
+    <div class="box"><h3>رویدادها زمان‌بندی دارند</h3><p>تاریخ انتشار گزارش‌ها و ساعت بازار آمریکا از قبل معلوم است.</p></div><div class="arrow" style="text-align:center">←</div>
+    <div class="box" style="background:var(--o2)"><h3>تقویم نفت در ورودی عامل</h3><p>عامل می‌داند چه منتشر شده و چه در راه است.</p></div>
+    <div class="box"><h3>USOON نفت جهانی را دنبال می‌کند، با تأخیر</h3><p>بازارساز والکس قیمت را به نفت و ارزش صندوق نزدیک نگه می‌دارد، ولی گاهی فاصله می‌افتد.</p></div><div class="arrow" style="text-align:center">←</div>
+    <div class="box" style="background:var(--o2)"><h3>مقایسه با مرجع جهانی</h3><p>شروع کار عامل، مقایسه با قرارداد نفت WTI است؛ ورود فقط وقتی فاصله‌ی واقعی بعد از هزینه بماند.</p></div>
+    <div class="box"><h3>بازار کم‌عمق و پرهزینه</h3><p>اسپرد و کارمزد رفت‌وبرگشت لبه‌ی کوچک را می‌خورد.</p></div><div class="arrow" style="text-align:center">←</div>
+    <div class="box" style="background:var(--o2)"><h3>«معامله نکن» پیش‌فرض است</h3><p>اندازه‌ی کوچک و ثابت، دروازه‌ی هزینه، و ترجیح صبر به ورود ضعیف.</p></div>
+  </div>
+</section>
+
+<!-- 6. agent architecture -->
+<section id="arch">
+  <h2><span class="n">۷</span>معماری عامل: هوش مصنوعی فکر می‌کند، کد اجازه می‌دهد</h2>
+  <p class="lead">هر ۵ دقیقه یک چرخه؛ مدل زبانی فقط وقتی بیدار می‌شود که چیزی ارزش تحلیل داشته باشد.</p>
+  <svg viewBox="0 0 1100 250">
+    <g text-anchor="middle" font-size="14">
+      <rect x="935" y="40" width="150" height="150" rx="16" fill="var(--bg)" stroke="var(--line)"/>
+      <text x="1010" y="75" font-weight="800" font-size="16">۱. خروج‌ها اول</text>
+      <text x="1010" y="102" font-size="12.5">حد ضرر، انقضا،</text><text x="1010" y="122" font-size="12.5">حداکثر نگه‌داری</text>
+      <text x="1010" y="160" font-size="12" fill="var(--mute)">قطعی، بدون مدل</text>
+      <rect x="760" y="40" width="155" height="150" rx="16" fill="var(--bg)" stroke="var(--line)"/>
+      <text x="837" y="75" font-weight="800" font-size="16">۲. محرک</text>
+      <text x="837" y="102" font-size="12.5">حرکت نفت، واگرایی،</text><text x="837" y="122" font-size="12.5">بررسی ساعتی</text>
+      <text x="837" y="160" font-size="12" fill="var(--mute)">بودجه‌ی فراخوانی</text>
+      <rect x="585" y="40" width="155" height="150" rx="16" fill="var(--b2)" stroke="var(--b)"/>
+      <text x="662" y="75" font-weight="800" font-size="16">۳. تصویر لحظه‌ای</text>
+      <text x="662" y="102" font-size="12.5">بازار، نفت جهانی،</text><text x="662" y="122" font-size="12.5">تقویم، کارنامه، درس‌ها</text>
+      <text x="662" y="160" font-size="12" fill="var(--mute)">«تا این لحظه»</text>
+      <rect x="390" y="25" width="175" height="180" rx="16" fill="var(--p2)" stroke="var(--p)" stroke-width="2"/>
+      <text x="477" y="62" font-weight="800" font-size="16">۴. تحلیلگر Claude</text>
+      <text x="477" y="90" font-size="12.5">جست‌وجو و خواندن وب</text>
+      <text x="477" y="112" font-size="12.5">شواهد مخالف</text>
+      <text x="477" y="134" font-size="12.5">خروجی JSON سخت‌گیر</text>
+      <text x="477" y="175" font-size="12" fill="var(--mute)">خطا ← «معامله نکن»</text>
+      <rect x="200" y="40" width="170" height="150" rx="16" fill="var(--r2)" stroke="var(--r)"/>
+      <text x="285" y="75" font-weight="800" font-size="16">۵. دروازه‌ی قطعی</text>
+      <text x="285" y="102" font-size="12.5">هزینه، اسپرد، عمق،</text><text x="285" y="122" font-size="12.5">تازگی، سقف‌ها</text>
+      <text x="285" y="160" font-size="12" fill="var(--mute)">اندازه‌ی ثابت</text>
+      <rect x="20" y="40" width="160" height="150" rx="16" fill="var(--g2)" stroke="var(--g)"/>
+      <text x="100" y="75" font-weight="800" font-size="16">۶. اجرا + لاگ</text>
+      <text x="100" y="102" font-size="12.5">سفارش لیمیت والکس</text><text x="100" y="122" font-size="12.5">هر تصمیم با دلیل</text>
+      <path d="M933,115 L917,115" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M758,115 L742,115" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M583,115 L567,115" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M388,115 L372,115" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M198,115 L182,115" stroke="#7a8a82" stroke-width="2" marker-end="url(#ar)"/>
+      <text x="550" y="238" font-size="14" fill="var(--mute)">پیشنهاد عامل سفارش نیست؛ اطمینان مدل هرگز اندازه‌ی معامله را تعیین نمی‌کند.</text>
+    </g>
+  </svg>
+</section>
+
+<!-- 7. harness / context / memory -->
+<section id="eng">
+  <h2><span class="n">۸</span>مهندسی پشت عامل: هارنس، کانتکست، حافظه</h2>
+  <p class="lead">کیفیت یک عامل فقط به مدل نیست؛ به چیزی است که دورش ساخته می‌شود.</p>
+  <div class="grid g3">
+    <div class="box" style="border-top:4px solid var(--b)"><h3>هارنس</h3>
+      <ul class="check" style="columns:1">
+        <li>حلقه‌ی ۵ دقیقه‌ای با قفل و ضربان سلامت</li>
+        <li>بودجه و فاصله‌ی فراخوانی، مهلت زمانی</li>
+        <li>شِمای JSON و اعتبارسنجی؛ خطا = «معامله نکن»</li>
+        <li>آداپتور مدل: Claude CLI، API، قاعده‌ای، بازپخش</li>
+        <li>شروع دوباره با تطبیق سفارش‌ها و موجودی</li>
+      </ul></div>
+    <div class="box" style="border-top:4px solid var(--o)"><h3>کانتکست</h3>
+      <ul class="check" style="columns:1">
+        <li>تصویر «تا این لحظه»: فقط کندل‌های بسته‌شده</li>
+        <li>دفتر سفارش والکس + مرجع جهانی نفت</li>
+        <li>تقویم انتشار گزارش‌ها و ساعت بازار آمریکا</li>
+        <li>وضعیت G و موقعیت‌های عامل</li>
+        <li>شاهد از آینده = رد خودکار</li>
+      </ul></div>
+    <div class="box" style="border-top:4px solid var(--p)"><h3>حافظه</h3>
+      <ul class="check" style="columns:1">
+        <li>حافظه‌ی شواهد: منابع ۲۴ ساعت اخیر</li>
+        <li>کارنامه: هر تصمیم ۱، ۲، ۴ و ۸ ساعت بعد نمره می‌گیرد</li>
+        <li>درس‌ها ادغام و با نتایج بعدی رتبه‌بندی می‌شوند</li>
+        <li>فراخوانی بازتابی، درس‌ها را خلاصه می‌کند</li>
+        <li>درس‌های برتر به تحلیل بعدی برمی‌گردند</li>
+      </ul></div>
+  </div>
+</section>
+
+<!-- 8. learning -->
+<section id="learn">
+  <h2><span class="n">۹</span>یادگیری از خودش</h2>
+  <p class="lead">حتی «معامله نکن» هم نمره می‌گیرد: اگر ورودِ ردشده بعداً ضرر می‌داد، تصمیم درست بوده.</p>
+  <div class="grid" style="grid-template-columns:420px 1fr">
+    <svg viewBox="0 0 420 300" id="loop">
+      <g text-anchor="middle" font-size="14" font-weight="700">
+        <circle cx="210" cy="150" r="105" fill="none" stroke="var(--line)" stroke-width="16"/>
+        <circle cx="210" cy="150" r="105" fill="none" stroke="var(--p)" stroke-width="4" stroke-dasharray="40 12"/>
+        <rect x="150" y="18" width="120" height="40" rx="12" fill="var(--p2)" stroke="var(--p)"/><text x="210" y="44">تصمیم</text>
+        <rect x="300" y="130" width="115" height="40" rx="12" fill="var(--b2)" stroke="var(--b)"/><text x="357" y="156">نمره با قیمت واقعی</text>
+        <rect x="150" y="242" width="120" height="40" rx="12" fill="var(--o2)" stroke="var(--o)"/><text x="210" y="268">درس</text>
+        <rect x="5" y="130" width="115" height="40" rx="12" fill="var(--g2)" stroke="var(--g)"/><text x="62" y="156">حافظه</text>
+        <text x="210" y="145" font-size="30" fill="var(--g)">≈⅔</text>
+        <text x="210" y="172" font-size="12" font-weight="400" fill="var(--mute)">ورودهای ردشده</text>
+        <text x="210" y="190" font-size="12" font-weight="400" fill="var(--mute)">بعد از ۴ ساعت ضرر می‌دادند</text>
+      </g>
+    </svg>
+    <div>
+      <p style="margin:0 0 8px;font-weight:700">درس‌هایی که خود عامل نوشته (نمونه‌ی واقعی از حافظه):</p>
+      <div class="quote">Before the US open, a 4h gap under 1% with a cost near 0.9% can never pass. Settle it quickly using the fair-value estimate (USO close × perp move) and save web searches for after the open.</div>
+      <div class="quote">When the 1h, 4h and 24h USOON returns are all the same value, USOON printed once and then froze. Treat it like a stale quote and wait for the US open.</div>
+      <div class="quote">Right after the US open, a 1h perp spike against a USOON print with zero returns is still a stale quote. Compare the ask with USO close × (1 + the perp's move) first.</div>
+      <p class="foot">عامل خودش فهمید قبل از باز شدن بازار آمریکا قیمت USOON به‌روز نمی‌شود، و دیگر روی قیمت کهنه وقت و هزینه نمی‌گذارد.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. trust: replay, simulation, gate -->
+<section id="trust">
+  <h2><span class="n">۱۰</span>چرا می‌شود به عامل اعتماد کرد؟</h2>
+  <p class="lead">قبل از اینکه یک تومان به عامل بسپاریم، رفتارش را بازپخش، شبیه‌سازی و محدود کردیم.</p>
+  <div class="grid g3">
+    <div class="box"><h3>بازپخش</h3><p>هر ورودی و پاسخ خام مدل ثبت می‌شود؛ هر اجرا را می‌شود بدون فراخوانی مدل دوباره پخش کرد و همان تصمیم‌ها را گرفت.</p></div>
+    <div class="box"><h3>شبیه‌سازی روی تاریخچه</h3><p>الگوهای ورود روی تاریخچه‌ی نفت آزموده شدند؛ فقط الگویی ماند که بعد از هزینه‌ی رفت‌وبرگشت سود داد، و همان شرط دروازه شد.</p></div>
+    <div class="box"><h3>مقایسه با مبنای بدون AI</h3><p>عامل روی همان تصویرها با یک قاعده‌ی ساده سنجیده می‌شود، تا معلوم باشد AI چه چیزی اضافه کرده.</p></div>
+  </div>
+  <h3 style="margin:16px 0 6px">دروازه: همه‌ی این شرط‌ها باید برقرار باشند</h3>
+  <ul class="check">
+    <li>سود مورد انتظار بیشتر از کل هزینه‌ی رفت‌وبرگشت</li>
+    <li>اسپرد و عمق دفتر در محدوده</li>
+    <li>قیمت‌ها و کندل‌ها تازه</li>
+    <li>شاهد مستند و شرط ابطال</li>
+    <li>نفت جهانی واقعاً جلوتر رفته باشد</li>
+    <li>سقف ورود روزانه و زیان روزانه</li>
+    <li>مبلغ ثابت و کوچک، یک موقعیت</li>
+    <li>حد ضرر سخت و حداکثر زمان نگه‌داری</li>
+  </ul>
+</section>
+
+<!-- 10. shadow -->
+<section id="shadow">
+  <h2><span class="n">۱۱</span>آزمون سایه: همان کد، بدون پول واقعی</h2>
+  <p class="lead">در حالت سایه، موتور روی دفتر سفارش واقعی والکس تصمیم می‌گیرد ولی سفارش‌ها کاغذی پر می‌شوند.</p>
+  <svg viewBox="0 0 1100 170">
+    <line x1="40" y1="70" x2="1060" y2="70" stroke="var(--line)" stroke-width="6" stroke-linecap="round"/>
+    <g text-anchor="middle" font-size="14">
+      <circle cx="1000" cy="70" r="13" fill="var(--b)"/><text x="1000" y="35" font-weight="700">سایه‌ی G</text><text x="1000" y="110" font-size="12.5">قبل از شروع</text><text x="1000" y="130" font-size="12.5" fill="var(--mute)">کل حلقه، پرشدن کاغذی</text>
+      <circle cx="770" cy="70" r="13" fill="var(--b)"/><text x="770" y="35" font-weight="700">سایه‌ی عامل نفت</text><text x="770" y="110" font-size="12.5">روز اول</text><text x="770" y="130" font-size="12.5" fill="var(--mute)">تصمیم‌ها بدون پول</text>
+      <circle cx="540" cy="70" r="13" fill="var(--o)"/><text x="540" y="35" font-weight="700">آزمون زنده‌ی کوچک</text><text x="540" y="110" font-size="12.5">یک رفت‌وبرگشت کوچک</text><text x="540" y="130" font-size="12.5" fill="var(--mute)">مسیر سفارش واقعی تأیید شد</text>
+      <circle cx="270" cy="70" r="13" fill="var(--g)"/><text x="270" y="35" font-weight="700">زنده + سایه کنار هم</text><text x="270" y="110" font-size="12.5">از بامداد روز دوم</text><text x="270" y="130" font-size="12.5" fill="var(--mute)">همان کد، همان لحظه</text>
+      <circle cx="80" cy="70" r="13" fill="var(--g)"/><text x="80" y="35" font-weight="700">پایان</text><text x="80" y="110" font-size="12.5">بستن و تبدیل به تومان</text>
+    </g>
+  </svg>
+  <div class="grid g2">
+    <div class="box"><h3>هم‌نظری زنده و سایه</h3><p>در تقریباً همه‌ی تصمیم‌های هم‌زمان، نسخه‌ی زنده و سایه به یک نتیجه رسیدند؛ رفتار عامل پایدار است و به اتفاق بستگی ندارد.</p></div>
+    <div class="box"><h3>نمره‌ی هر دو</h3><p>تصمیم‌های هر دو نسخه با همان روش رو به جلو نمره می‌گیرند و در داشبورد نتایج کنار هم آمده‌اند.</p></div>
+  </div>
+</section>
+
+<!-- 11. risk -->
+<section id="risk">
+  <h2><span class="n">۱۲</span>مدیریت ریسک و سرمایه</h2>
+  <p class="lead">همه‌ی محدودیت‌ها در کد ثابت‌اند و هیچ‌چیز، از جمله هوش مصنوعی، نمی‌تواند شلشان کند.</p>
+  <div class="grid g4">
+    <div class="box"><h3>⚖️ هرگز با کل پول</h3><p>هر کوین حداکثر یک‌پنجم سرمایه؛ عامل نفت مبلغ کوچک و ثابت.</p></div>
+    <div class="box"><h3>🛑 کلید توقف</h3><p>افت ۱۰٪ از اوج ← بستن همه‌چیز و توقف.</p></div>
+    <div class="box"><h3>⏸️ مکث پس از زیان</h3><p>زیان ۴٪ در ۶ ساعت ← دو ساعت بدون موقعیت.</p></div>
+    <div class="box"><h3>📉 حد ضرر</h3><p>عامل نفت: حد ضرر سخت و سقف زیان روزانه.</p></div>
+    <div class="box"><h3>🚫 بدون اهرم</h3><p>فقط خرید نقدی؛ بدون مارجین و فروش استقراضی.</p></div>
+    <div class="box"><h3>🔐 دو قفل زنده</h3><p>سفارش واقعی هم پرچم لایو و هم متغیر محیطی جدا لازم دارد.</p></div>
+    <div class="box"><h3>🧊 داده‌ی کهنه</h3><p>اگر قیمت یا دفتر تازه نباشد، آن چرخه معامله نمی‌شود.</p></div>
+    <div class="box"><h3>🔁 ادامه از همان نقطه</h3><p>وضعیت ذخیره می‌شود؛ هر اجرا پس از شروع دوباره از همان‌جا ادامه می‌دهد.</p></div>
+  </div>
+</section>
+
+<!-- 12. reproducibility -->
+<section id="repro">
+  <h2><span class="n">۱۳</span>شفاف و قابل تکرار</h2>
+  <div class="grid g4">
+    <div class="box" style="border-top:4px solid var(--g)"><h3>کد = کد معامله</h3><p>همان نسخه‌ای که معامله کرد؛ فایل مانیفست هش هر فایل را دارد.</p></div>
+    <div class="box" style="border-top:4px solid var(--b)"><h3>لاگ تصمیم</h3><p>هر چرخه و هر سفارش با سیگنال، دلیل و نتیجه‌ی پرشدن.</p></div>
+    <div class="box" style="border-top:4px solid var(--o)"><h3>تست‌های آفلاین</h3><p>همه‌ی تست‌ها بدون شبکه و بدون کلید اجرا می‌شوند.</p></div>
+    <div class="box" style="border-top:4px solid var(--p)"><h3>بازسازی نتایج</h3><p>بک‌تست، نمودارها، داشبورد و نتایج با دستورهای راهنما دوباره ساخته می‌شوند.</p></div>
+  </div>
+  <p class="foot ltr" style="text-align:left;margin-top:12px">github.com/dahdash/wlx · README.md · RESULTS.md · docs/decision-log.md · docs/backtest/ · MANIFEST.sha256</p>
+</section>
+
+</div>
+<script>
+(() => {
+  const NS = 'http://www.w3.org/2000/svg';
+  const el = (p, tag, a, txt) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; p.appendChild(e); return e; };
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+
+  // G: six votes
+  const v = document.getElementById('votes');
+  [['۱۲ ساعت', 1], ['۱۸ ساعت', 1], ['۱ روز', 1], ['۱٫۵ روز', 1], ['۲ روز', 0], ['۷ روز', 0]].forEach(([t, on], i) => {
+    const y = 42 + i * 38;
+    el(v, 'rect', {x: 910, y, width: 170, height: 30, rx: 15, fill: on ? 'var(--g2)' : 'var(--bg)', stroke: on ? 'var(--g)' : 'var(--line)'});
+    el(v, 'circle', {cx: 1060, cy: y + 15, r: 8, fill: on ? 'var(--g)' : '#b9c4be'});
+    el(v, 'text', {x: 985, y: y + 20, 'font-size': 13}, (on ? 'رأی مثبت · ' : 'رأی منفی · ') + t);
+  });
+
+  // coins: cumulative holdout PnL per coin + bundle, and max drawdown
+  const CO = {"BTC": [2.6, 4.7, -3.3, -3.8, -3.8, -3.8, 1.8, 4.5, 7.2, 34.1, 39.1, 32.5, 31.6, 28.5, 27.6, 27.5, 28.8, 28.8, 28.8, 28.8, 37.0, 31.3, 28.1, 29.1, 27.5, 27.5, 27.5, 27.5, 27.5, 29.1, 22.4, 19.8, 15.0, 15.0, 15.0, 15.0, 13.2, 13.2, 17.7, 17.7, 15.3, 18.2, 20.7, 21.3, 20.8, 46.1, 45.7, 54.9, 53.9, 50.6, 57.7, 49.5, 45.6, 46.8, 37.2, 38.6, 32.7, 29.2, 29.3, 27.3, 27.3, 27.3, 27.3, 27.3, 27.3, 24.7, 24.7, 21.6, 20.5, 30.1, 29.8, 35.0, 36.2, 40.3, 37.7, 41.8, 36.9, 34.8, 34.9, 33.1, 43.2, 39.8, 36.0, 33.5, 33.0, 29.9, 29.9, 29.9, 29.9, 29.9, 27.4, 28.3, 40.4, 37.0, 37.0, 41.4, 41.3, 41.3, 41.3, 41.3, 41.3, 41.3, 41.3, 41.7, 40.0, 46.4, 42.6, 45.4, 45.4, 40.9, 40.9, 40.9, 40.9, 40.9, 36.5, 44.4, 35.9, 29.8, 30.9, 33.9, 35.7, 35.6, 37.3, 39.1, 34.2, 34.2, 34.2, 34.2, 34.2, 34.2, 34.2, 37.2, 32.9, 33.4, 31.1, 29.5, 28.9, 28.5, 45.4, 42.1, 39.6, 38.4, 46.0, 41.4, 41.4], "ETH": [0.6, -4.1, 2.9, 0.8, 0.8, 1.0, 9.2, 18.9, 25.9, 43.9, 58.3, 49.4, 49.0, 42.8, 42.7, 42.7, 42.7, 42.7, 42.7, 42.7, 40.5, 46.6, 42.0, 38.4, 35.2, 35.1, 35.1, 35.1, 35.1, 32.4, 31.8, 31.8, 31.8, 31.8, 31.8, 31.8, 29.8, 29.8, 29.8, 26.9, 26.5, 34.2, 36.1, 34.2, 28.0, 53.0, 43.7, 41.4, 43.0, 45.2, 45.1, 38.0, 39.0, 39.0, 39.0, 32.1, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 29.8, 28.3, 64.3, 59.5, 57.6, 55.5, 49.7, 41.5, 40.3, 40.3, 33.8, 35.6, 66.2, 64.1, 61.2, 83.9, 91.9, 91.1, 89.9, 86.0, 78.5, 74.1, 74.1, 81.6, 71.5, 71.5, 69.7, 69.5, 69.5, 69.5, 69.5, 69.5, 69.5, 65.4, 66.5, 62.9, 68.9, 71.5, 74.3, 73.0, 64.5, 64.5, 64.5, 64.5, 64.5, 57.8, 78.0, 64.5, 54.6, 49.3, 54.1, 51.6, 47.2, 47.0, 45.1, 45.1, 45.1, 45.1, 45.1, 45.1, 45.1, 45.1, 48.3, 43.3, 41.9, 38.7, 36.0, 33.9, 33.9, 46.4, 43.1, 41.1, 38.6, 45.9, 39.4, 38.7], "XRP": [0.0, -6.1, -6.1, -6.1, -6.1, -6.1, -6.1, -8.0, -11.0, 2.1, -8.0, -17.5, -15.7, -20.3, -20.3, -20.3, -20.3, -20.3, -20.3, -20.3, -19.6, -20.0, -20.8, -23.0, -23.0, -23.0, -23.0, -23.0, -21.4, -14.4, -17.8, -23.0, -23.6, -23.3, -24.6, -25.1, -26.1, -24.1, -24.2, -22.9, -27.1, -27.2, -27.2, -27.2, -27.2, -16.7, 49.5, 88.7, 247.1, 206.3, 195.7, 166.6, 154.0, 155.3, 143.1, 193.3, 189.6, 178.1, 178.0, 178.0, 178.0, 133.8, 123.6, 123.6, 123.6, 115.5, 115.5, 115.5, 115.5, 120.0, 111.9, 131.9, 116.0, 105.6, 104.9, 97.8, 97.8, 97.8, 103.1, 96.2, 150.6, 194.8, 170.3, 169.5, 173.2, 161.7, 161.7, 160.4, 160.4, 153.5, 148.9, 148.9, 147.8, 142.8, 142.8, 142.8, 142.8, 142.8, 142.8, 142.8, 142.8, 142.8, 142.8, 142.8, 142.8, 172.3, 149.2, 144.0, 141.9, 135.8, 135.8, 135.8, 135.8, 135.8, 129.4, 129.0, 115.1, 114.1, 114.1, 114.1, 109.2, 105.2, 104.0, 113.1, 102.6, 102.6, 102.6, 102.6, 102.6, 102.6, 102.6, 103.5, 103.4, 103.4, 95.6, 95.7, 95.7, 95.7, 128.4, 116.3, 113.9, 108.8, 99.3, 90.7, 90.3], "SOL": [1.0, -9.2, -14.1, -17.9, -17.9, -19.8, -16.0, -17.6, -17.4, -1.1, 1.4, 32.4, 22.1, 20.0, 14.5, 10.7, 10.7, 10.7, 10.7, 10.7, 30.8, 20.2, 18.4, 13.3, 11.9, 11.9, 11.9, 11.9, 11.9, 22.8, 19.0, 15.3, 14.6, 14.6, 14.6, 14.6, 12.3, 12.3, 12.3, 12.9, 11.6, 19.1, 22.8, 26.8, 22.3, 51.1, 59.0, 56.9, 52.2, 44.0, 39.9, 39.9, 39.9, 39.9, 30.2, 52.7, 41.9, 36.7, 35.9, 32.7, 32.7, 32.7, 32.7, 32.7, 32.7, 30.2, 30.2, 31.0, 32.4, 31.4, 27.6, 45.1, 33.8, 36.4, 34.0, 29.9, 29.9, 29.9, 29.9, 27.1, 23.9, 43.6, 35.6, 37.1, 39.9, 36.5, 30.9, 31.8, 32.0, 43.2, 39.0, 42.5, 46.1, 38.9, 38.9, 38.9, 38.9, 38.9, 38.9, 38.9, 38.9, 38.9, 38.9, 38.9, 38.9, 43.5, 39.6, 39.4, 38.5, 34.4, 34.4, 34.4, 34.4, 34.4, 29.5, 36.5, 25.9, 17.1, 15.5, 15.4, 14.8, 12.3, 11.5, 27.0, 19.9, 16.3, 16.0, 16.0, 16.0, 16.0, 16.0, 21.1, 16.0, 14.4, 9.7, 9.6, 9.6, 8.7, 25.9, 29.0, 27.2, 24.6, 32.2, 29.0, 28.0], "BNB": [-0.1, -3.0, -3.3, -7.6, -7.8, -8.5, -4.0, 2.2, 12.2, 15.3, 35.2, 44.0, 48.5, 47.0, 45.9, 44.1, 55.4, 53.9, 53.5, 49.8, 42.9, 38.7, 41.1, 50.4, 47.5, 46.6, 46.6, 46.6, 46.6, 45.2, 40.8, 37.3, 37.3, 37.3, 36.5, 36.5, 34.4, 35.4, 38.8, 33.1, 33.1, 35.5, 36.8, 36.7, 31.8, 44.2, 34.5, 35.2, 32.3, 34.4, 34.6, 26.9, 26.5, 26.2, 20.2, 17.9, 17.9, 17.9, 17.9, 17.9, 17.9, 11.6, 10.1, 10.1, 10.1, 6.9, 5.2, 4.5, 4.5, 4.2, 3.4, 10.7, 8.7, 9.5, 7.6, 4.7, 2.6, 2.3, 2.3, 0.7, 2.9, 11.5, 16.8, 12.6, 17.1, 22.0, 19.0, 19.0, 20.3, 26.3, 33.6, 37.0, 62.7, 65.3, 55.7, 56.0, 52.2, 52.2, 52.2, 52.2, 52.2, 52.2, 52.2, 52.0, 51.8, 55.3, 53.1, 54.1, 50.6, 44.2, 44.2, 44.2, 44.2, 44.2, 40.2, 47.0, 41.1, 37.3, 37.3, 37.3, 34.2, 32.1, 30.8, 39.2, 35.8, 37.0, 34.0, 27.9, 27.9, 27.9, 27.9, 30.7, 30.7, 30.7, 28.6, 28.7, 29.1, 30.4, 45.7, 41.1, 46.5, 42.5, 51.9, 45.5, 45.5], "N5": [0.8, -3.6, -4.8, -6.9, -6.9, -7.5, -3.1, -0.4, 2.6, 18.4, 23.8, 27.2, 26.3, 22.7, 21.2, 20.1, 22.2, 21.9, 21.9, 21.3, 25.7, 22.9, 21.3, 20.7, 19.1, 18.9, 18.9, 18.9, 19.5, 23.6, 19.8, 16.5, 15.3, 15.4, 14.9, 14.8, 12.9, 13.7, 15.2, 14.3, 12.2, 16.1, 17.9, 18.5, 15.6, 36.0, 51.5, 60.5, 80.3, 74.9, 74.4, 65.5, 63.2, 63.6, 56.1, 66.2, 61.5, 58.2, 58.1, 56.9, 56.9, 50.0, 48.3, 48.3, 48.3, 45.2, 44.8, 44.1, 44.2, 46.8, 44.2, 62.0, 56.0, 55.9, 53.7, 50.7, 47.4, 46.6, 47.4, 43.6, 53.5, 72.3, 67.8, 65.6, 72.5, 72.4, 70.1, 70.0, 69.8, 72.0, 70.8, 72.8, 84.5, 79.8, 77.7, 78.5, 77.6, 77.6, 77.6, 77.6, 77.6, 77.6, 76.8, 77.1, 75.8, 84.9, 79.8, 80.6, 78.9, 72.6, 72.6, 72.6, 72.6, 72.6, 67.0, 76.5, 65.5, 58.6, 57.3, 59.1, 57.4, 54.8, 54.4, 61.9, 56.5, 55.9, 55.1, 53.7, 53.7, 53.7, 53.7, 57.3, 53.9, 53.3, 49.2, 48.3, 47.8, 47.8, 67.7, 64.3, 63.6, 60.5, 66.5, 60.4, 59.9], "mdd": {"BTC": 0.259, "ETH": 0.377, "XRP": 0.477, "SOL": 0.403, "BNB": 0.382, "N5": 0.223}};
+  const cp = document.getElementById('coinpnl'), col = {BTC: '#f59e0b', ETH: '#6366f1', XRP: '#0ea5e9', SOL: '#a855f7', BNB: '#eab308', N5: 'var(--g)'};
+  const n = CO.N5.length, lo = -40, hi = Math.ceil(Math.max(...['BTC','ETH','XRP','SOL','BNB'].flatMap((c) => CO[c])) / 50) * 50 + 10, px = (i) => 40 + i / (n - 1) * 600, py = (val) => 270 - (Math.max(lo, Math.min(hi, val)) - lo) / (hi - lo) * 250;
+  [0, 50, 100, 150, 200].filter((t) => t < hi).forEach((t) => { el(cp, 'line', {x1: 40, x2: 640, y1: py(t), y2: py(t), stroke: 'var(--line)', 'stroke-dasharray': t ? '4 4' : ''}); el(cp, 'text', {x: 34, y: py(t) + 4, 'font-size': 11, 'text-anchor': 'end', direction: 'ltr', fill: 'var(--mute)'}, t + '%'); });
+  ['BTC', 'ETH', 'XRP', 'SOL', 'BNB', 'N5'].forEach((c) => {
+    const ys = CO[c], big = c === 'N5';
+    el(cp, 'path', {d: ys.map((y, i) => (i ? 'L' : 'M') + px(i).toFixed(1) + ',' + py(y).toFixed(1)).join(''), fill: 'none', stroke: col[c], 'stroke-width': big ? 4.5 : 1.8, opacity: big ? 1 : 0.8});
+    el(cp, 'text', {x: 646, y: py(ys[ys.length - 1]) + 4, 'font-size': big ? 14 : 12, 'font-weight': 700, fill: col[c], direction: 'ltr', 'text-anchor': 'start'}, big ? 'سبد' : c);
+  });
+  ['2024', '2025', '2026'].forEach((y, i) => el(cp, 'text', {x: px(Math.min(n - 1, i * 52.2)), y: 292, 'font-size': 11, 'text-anchor': 'middle', fill: 'var(--mute)'}, y));
+  const cd = document.getElementById('coindd');
+  ['N5', 'BTC', 'ETH', 'BNB', 'SOL', 'XRP'].forEach((c, i) => {
+    const val = CO.mdd[c] * 100, y = 15 + i * 46, w = val * 4.6;
+    el(cd, 'rect', {x: 255 - w, y, width: w, height: 30, rx: 7, fill: c === 'N5' ? 'var(--g)' : col[c], opacity: c === 'N5' ? 1 : 0.75});
+    el(cd, 'text', {x: 262, y: y + 20, 'font-size': 13, 'font-weight': 700, 'text-anchor': 'start', direction: 'ltr'}, c === 'N5' ? 'سبد' : c);
+    el(cd, 'text', {x: 250 - w, y: y + 20, 'font-size': 12, 'text-anchor': 'end', direction: 'ltr'}, '−' + val.toFixed(0) + '%');
+  });
+
+  // yearly bars (maker fees): G vs buy & hold, clipped at ±150 %
+  const Y = [['2020', 38.0, 26.6], ['2021', 443.3, 1101.9], ['2022', -6.0, -70.6], ['2023', 54.0, 180.3], ['2024', 63.2, 134.9], ['2025', 8.1, -3.6], ['2026*', -9.4, -8.2]];
+  const ys = document.getElementById('years'), z = 140, k = 100 / 150;
+  el(ys, 'line', {x1: 10, x2: 510, y1: z, y2: z, stroke: 'var(--line)'});
+  Y.forEach(([yr, g, h], i) => {
+    const x = 470 - i * 70;
+    [[g, 'var(--g)', 0], [h, '#9aa7a0', 24]].forEach(([val, c, dx]) => {
+      const cl = Math.max(-100, Math.min(150, val)), hgt = Math.abs(cl) * k;
+      el(ys, 'rect', {x: x + dx - 20, y: cl >= 0 ? z - hgt : z, width: 20, height: Math.max(hgt, 1.5), rx: 3, fill: c});
+      if (Math.abs(val) > 150) el(ys, 'text', {x: x + dx - 10, y: z - hgt - 4, 'font-size': 10, 'text-anchor': 'middle'}, '↑');
+    });
+    el(ys, 'text', {x: x + 2, y: 245, 'font-size': 12, 'text-anchor': 'middle', fill: 'var(--mute)'}, yr);
+    if (yr === '2022') { el(ys, 'text', {x: x + 2, y: 232, 'font-size': 11, 'text-anchor': 'middle', fill: 'var(--r)', 'font-weight': 700}, 'سقوط بازار'); }
+  });
+  el(ys, 'rect', {x: 360, y: 8, width: 12, height: 12, rx: 3, fill: 'var(--g)'}); el(ys, 'text', {x: 354, y: 19, 'font-size': 12, 'text-anchor': 'start'}, 'G');
+  el(ys, 'rect', {x: 310, y: 8, width: 12, height: 12, rx: 3, fill: '#9aa7a0'}); el(ys, 'text', {x: 304, y: 19, 'font-size': 12, 'text-anchor': 'start'}, 'نگه‌داری ساده');
+
+  // drawdown bars (holdout)
+  const dd = document.getElementById('dd');
+  [['G (کارمزد میکر)', 22.3, 'var(--g)'], ['G (کارمزد تیکر)', 30.2, '#5cc49b'], ['نگه‌داری ساده', 63.3, 'var(--r)']].forEach(([t, val, c], i) => {
+    const y = 30 + i * 70, w = val * 6;
+    el(dd, 'rect', {x: 500 - w, y, width: w, height: 38, rx: 8, fill: c});
+    el(dd, 'text', {x: 500, y: y + 58, 'font-size': 13, 'text-anchor': 'start', fill: 'var(--mute)'}, t);
+    el(dd, 'text', {x: 492 - w, y: y + 25, 'font-size': 15, 'font-weight': 700, 'text-anchor': 'end', direction: 'ltr'}, '−' + val + '%');
+  });
+
+  // permutation (schematic from the reported null mean / p95 and the real value)
+  const pm = document.getElementById('perm');
+  const mu = 0.028, sd = (0.074 - 0.028) / 1.645, real = 0.083, X = (x) => 40 + (x + 0.06) / 0.18 * 440;
+  let d = '';
+  for (let x = -0.06; x <= 0.12; x += 0.002) { const yv = Math.exp(-0.5 * ((x - mu) / sd) ** 2); d += (d ? 'L' : 'M') + X(x).toFixed(1) + ',' + (150 - yv * 110).toFixed(1); }
+  el(pm, 'path', {d: d + `L${X(0.12)},150 L${X(-0.06)},150z`, fill: 'var(--b2)', stroke: 'var(--b)', 'stroke-width': 2});
+  el(pm, 'line', {x1: X(real), x2: X(real), y1: 20, y2: 150, stroke: 'var(--g)', 'stroke-width': 4});
+  el(pm, 'text', {x: X(real) + 6, y: 22, 'font-size': 13, 'font-weight': 700, fill: 'var(--g)', 'text-anchor': 'start'}, 'استراتژی واقعی');
+  el(pm, 'text', {x: X(mu), y: 172, 'font-size': 12, 'text-anchor': 'middle', fill: 'var(--mute)'}, '۱۵۰ نسخه با زمان‌بندی به‌هم‌ریخته');
+  el(pm, 'text', {x: X(0.105), y: 120, 'font-size': 13, 'text-anchor': 'middle', fill: 'var(--b)', 'font-weight': 700}, 'p ≈ 0.03');
+
+  // sensitivity heat map: holdout CAGR / MDD for gate × band (all positive)
+  const hm = document.getElementById('heat');
+  const H = [[20.30, 21.96, 23.63, 23.09], [16.99, 17.67, 18.60, 17.52], [21.54, 20.44, 21.25, 20.85]], gates = ['۱۴ روز', '۲۸ روز', '۵۶ روز'], bands = ['۰٪', '۰٫۱۵٪', '۰٫۳٪', '۰٫۵٪'];
+  H.forEach((row, i) => row.forEach((val, j) => {
+    const x = 340 - j * 90, y = 30 + i * 48, a = 0.35 + (val - 15) / 12;
+    el(hm, 'rect', {x, y, width: 84, height: 42, rx: 8, fill: `rgba(15,159,110,${a.toFixed(2)})`, stroke: (i === 1 && j === 2) ? 'var(--ink)' : 'none', 'stroke-width': 2.5});
+    el(hm, 'text', {x: x + 42, y: y + 27, 'font-size': 14, 'font-weight': 700, 'text-anchor': 'middle', direction: 'ltr'}, '+' + val.toFixed(1) + '%');
+  }));
+  gates.forEach((t, i) => el(hm, 'text', {x: 515, y: 57 + i * 48, 'font-size': 12, 'text-anchor': 'start', fill: 'var(--mute)'}, 'دروازه ' + t));
+  bands.forEach((t, j) => el(hm, 'text', {x: 382 - j * 90, y: 20, 'font-size': 12, 'text-anchor': 'middle', fill: 'var(--mute)'}, 'باند ' + t));
+  el(hm, 'text', {x: 260, y: 186, 'font-size': 12, 'text-anchor': 'middle', fill: 'var(--mute)'}, 'سود سالانه‌ی دوره‌ی دست‌نخورده؛ قاب سیاه = پارامتر انتخاب‌شده');
+})();
+</script>
+</body>
+</html>

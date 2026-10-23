@@ -1,0 +1,10 @@
+# Optional: charts for scripts/backtest_report.py (not needed to trade or to run tests).
+# Tested on Python 3.14, pandas 3.0.6, numpy 2.5.4.
+quantstats==0.0.86
+plotly==7.1.0
+matplotlib==3.11.2
+seaborn==0.13.2
+scipy==1.18.1
+# crosscheck subcommand only:
+vectorbt==1.2.0
+numba==0.68.0
